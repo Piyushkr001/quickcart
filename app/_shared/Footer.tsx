@@ -9,6 +9,7 @@ import {
   InstagramLogoIcon,
   XLogoIcon,
 } from "@phosphor-icons/react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -18,18 +19,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10">
-                <ShoppingCart className="h-5 w-5 text-primary" />
-              </div>
-
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                Quick<span className="text-primary">Cart</span>
-              </span>
+              <Image src="/Images/Logo/quickcart-logo-light.svg" alt="Logo" width={180} height={60} className="object-contain w-full h-full dark:hidden block" />
+              <Image src="/Images/Logo/quickcart-logo-dark.svg" alt="Logo" width={180} height={60} className="object-contain w-full h-full hidden dark:block" />
             </Link>
 
             <p className="text-sm text-muted-foreground">
-              QuickCart is a smart e-commerce dashboard for managing Shopify
-              orders, products, customers, and store analytics in one place.
+              QuickCart is a smart e-commerce dashboard for managing your orders, products, customers, and store analytics in one place.
             </p>
 
             <div className="flex gap-3">

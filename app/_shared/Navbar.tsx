@@ -18,6 +18,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Image from "next/image";
 
 type AuthUser = {
   name?: string;
@@ -53,13 +54,8 @@ export default function Navbar({ user = null }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10">
-            <ShoppingCart className="h-5 w-5 text-primary" />
-          </div>
-
-          <span className="text-xl font-bold tracking-tight text-foreground">
-            Quick<span className="text-primary">Cart</span>
-          </span>
+          <Image src="/Images/Logo/quickcart-logo-light.svg" alt="Logo" width={180} height={60} className="object-contain w-full h-full dark:hidden block" />
+          <Image src="/Images/Logo/quickcart-logo-dark.svg" alt="Logo" width={180} height={60} className="object-contain w-full h-full hidden dark:block" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
