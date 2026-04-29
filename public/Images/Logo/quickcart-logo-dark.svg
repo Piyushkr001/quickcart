@@ -1,0 +1,14 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="60" height="60" rx="14" fill="#0F172A"/>
+  <path d="M22 30H26L30 48H52L56 36H32" stroke="url(#gradDark)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="34" cy="54" r="3" fill="url(#gradDark)"/>
+  <circle cx="48" cy="54" r="3" fill="url(#gradDark)"/>
+  <path d="M38 20L34 30H40L36 42L50 28H44L48 20Z" fill="url(#gradDark)"/>
+  <text x="90" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#F8FAFC">Quick<tspan fill="url(#gradDark)">Cart</tspan></text>
+</svg>
