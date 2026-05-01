@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { SparklesText } from "@/components/ui/sparkles-text";
 import {
   ArrowRight,
   ShoppingCart,
@@ -9,7 +10,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-16 pb-16 md:pt-24 lg:pt-32">
+    <section className="relative overflow-hidden bg-linear-to-b from-primary/10 via-background to-background dark:from-primary/20 dark:via-background dark:to-background pt-16 pb-16 md:pt-24 lg:pt-32">
+      {/* Vibrant Dynamic Background Gradients */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-primary/20 via-background to-background dark:from-primary/30" />
+      <div className="pointer-events-none absolute -top-40 -left-40 -z-10 h-[600px] w-[600px] rounded-full bg-primary/30 blur-[120px] opacity-70 dark:bg-primary/40 dark:opacity-50" />
+      <div className="pointer-events-none absolute top-1/4 right-0 -z-10 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/20 blur-[120px] opacity-70 dark:bg-blue-500/30 dark:opacity-50" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 -z-10 h-[400px] w-[400px] rounded-full bg-violet-500/20 blur-[120px] opacity-60 dark:bg-violet-500/30 dark:opacity-40" />
+
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           
@@ -25,7 +32,11 @@ export default function Hero() {
             {/* Heading */}
             <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-7xl">
               Manage Your Store <br className="hidden lg:inline" />
-              <span className="text-primary">Smarter & Faster</span>
+              <SparklesText>
+              <span className="bg-linear-to-r from-primary via-blue-500 to-violet-500 bg-clip-text text-transparent">
+                Smarter & Faster
+              </span>
+              </SparklesText>
             </h1>
 
             {/* Description */}

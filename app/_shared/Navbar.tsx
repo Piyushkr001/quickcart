@@ -19,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
+import { ModeToggle } from "@/components/Modetoggle";
 
 type AuthUser = {
   name?: string;
@@ -71,7 +72,8 @@ export default function Navbar({ user = null }: NavbarProps) {
             ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="flex items-center gap-2 md:gap-4">
+          <div className="hidden items-center gap-3 md:flex">
           {!isSignedIn ? (
             <>
               <Button
@@ -125,9 +127,11 @@ export default function Navbar({ user = null }: NavbarProps) {
               </Button>
             </>
           )}
-        </div>
+          </div>
 
-        <Sheet>
+          <ModeToggle />
+
+          <Sheet>
           <SheetTrigger
             className="md:hidden"
             render={<Button variant="ghost" size="icon" />}
@@ -243,7 +247,8 @@ export default function Navbar({ user = null }: NavbarProps) {
               )}
             </div>
           </SheetContent>
-        </Sheet>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
